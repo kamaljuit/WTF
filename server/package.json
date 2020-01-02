@@ -1,0 +1,11 @@
+{
+  "name": "wtf-server",
+  "version": "1.0.0",
+  "description": "Backend Server for WTF",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Kamal Jeet Singh",
+  "license": "ISC"
+}
