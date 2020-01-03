@@ -2,9 +2,9 @@ import React from "react";
 import Card from "@material-ui/core/Card";
 import CardMedia from "@material-ui/core/CardMedia";
 import CardContent from "@material-ui/core/CardContent";
-import "./Item.styles.scss";
+import "./FoodItem.styles.scss";
 import { Button } from "@material-ui/core";
-export default function Item(props) {
+export default function FoodItem(props) {
   return (
     <Card className="item">
       <CardMedia className="media" image="/logo192.png" title="Paella dish" />
