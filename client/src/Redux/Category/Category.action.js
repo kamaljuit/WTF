@@ -7,6 +7,7 @@ export const setAllCategories = allCategories => {
   };
 };
 
+//data is the name of the category
 export const setActiveCategory = data => {
   return {
     type: CategoryTypes.SET_ACTIVE_CATEGORY,

@@ -17,6 +17,8 @@ const rootReducer = combineReducers({
   Order: OrderReducer
 });
 
-const persistedReducer = persistReducer(persistConfig, rootReducer);
+// const persistedReducer = persistReducer(persistConfig, rootReducer);
 
-export default persistedReducer;
+// export default persistedReducer;
+
+export default rootReducer;

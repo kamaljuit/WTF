@@ -69,7 +69,7 @@ export default function SubCategoryCard(props) {
       <Collapse in={expanded} timeout="auto" unmountOnExit>
         <CardContent>
           {props.items.map(item => {
-            return <FoodItem {...item} />;
+            return <FoodItem item={item} />;
           })}
         </CardContent>
       </Collapse>

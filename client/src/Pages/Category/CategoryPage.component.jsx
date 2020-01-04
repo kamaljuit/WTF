@@ -4,6 +4,8 @@ import { Switch } from "@material-ui/core";
 import InputBase from "@material-ui/core/InputBase";
 import SearchIcon from "@material-ui/icons/Search";
 import { connect } from "react-redux";
+import { getActiveCategory } from "../../Redux/Category/Category.action";
+
 import SubCategoryCard from "../../Components/SubCategoryCard/SubCategoryCard.component";
 //will recieve the id of the category in urlParams
 import "./CategoryPage.styles.scss";
@@ -54,6 +56,10 @@ const CategoryPage = props => {
                         ? "subcategory active "
                         : "subcategory"
                     }
+                    onClick={() => {
+                      props.dispatch(getActiveCategory(category.name));
+                      history.push(`/category/${category.name}`);
+                    }}
                   >
                     {category.name}
                   </div>

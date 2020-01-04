@@ -32,7 +32,27 @@ const addOrderToPlate = (plate, newItem) => {
     }
   });
   if (found) return [...plate];
-  else return [...plate].push({ item: newItem, quantity: 1 });
+  else {
+    const newPlate = [...plate];
+    //Dont refactor this code as we cannot spread and push at the same time in JS
+    newPlate.push({ item: newItem, quantity: 1 });
+    return newPlate;
+  }
+};
+
+const removeOrderFromPlate = (plate, item) => {
+  const modifiedPlate = plate.filter(order => {
+    if (order.item._id == item._id) {
+      if (order.quantity > 1) {
+        order.quantity -= 1;
+        return order;
+      }
+    } else {
+      return order;
+    }
+  });
+
+  return modifiedPlate;
 };
 
 export default function orderReducer(state = INITIAL_STATE, action) {
@@ -41,6 +61,13 @@ export default function orderReducer(state = INITIAL_STATE, action) {
       return {
         ...state,
         plate: addOrderToPlate(state.plate, action.payload)
+      };
+    }
+
+    case OrderTypes.REMOVE_ORDER: {
+      return {
+        ...state,
+        plate: removeOrderFromPlate(state.plate, action.payload)
       };
     }
     default:

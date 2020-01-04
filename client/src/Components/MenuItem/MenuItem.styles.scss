@@ -2,5 +2,13 @@
   .heading {
     color: blue($color: #000000);
     margin: 0 5vw;
+    border-radius: 10px;
+    padding: 4px;
+    background-color: lightgray;
+    color: black;
+  }
+
+  &:hover {
+    cursor: pointer;
   }
 }

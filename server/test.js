@@ -1,7 +1,12 @@
 const arr=[1,2,3];
 
 const res= arr.map(item=>{
-	return 2;
-})
+	if(item===1) return item;
+});
 
-console.log(res)
+const res2=[...res];
+
+
+
+
+console.log(res,res2)

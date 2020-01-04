@@ -19,5 +19,18 @@
   .footer {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    .section {
+      display: flex;
+      justify-content: space-around;
+
+      .quantity {
+        background-color: floralwhite;
+        min-width: 25px;
+        font-weight: bold;
+        align-self: center;
+        text-align: center;
+      }
+    }
   }
 }

@@ -7,7 +7,7 @@ import "./GridList.styles.scss";
 export default function SingleLineGridList(props) {
   return (
     <div className="grid-list-root">
-      <GridList className="list">
+      <GridList className="list" style={{ height: "fit-content" }}>
         {props.items.map(item => (
           <GridListTile
             key={item._id}
@@ -15,9 +15,9 @@ export default function SingleLineGridList(props) {
             style={{ height: "unset", width: "max-content" }}
           >
             {props.type === "FoodItem" ? (
-              <FoodItem {...item} />
+              <FoodItem item={item} />
             ) : (
-              <MenuItem {...item} />
+              <MenuItem {...item} item={item} />
             )}
           </GridListTile>
         ))}

@@ -20,6 +20,10 @@
       background-color: lightgray;
       color: black;
       margin: 0 5vw;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     .active {
