@@ -3,9 +3,13 @@
   flex-wrap: "wrap";
   justify-content: "space-around";
   overflow: "hidden";
-
+  margin: 3vw 0;
   .list {
     flex-wrap: nowrap;
     // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
+
+    .tile {
+      width: max-content;
+    }
   }
 }

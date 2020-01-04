@@ -17,22 +17,24 @@ const CategoryPage = props => {
   };
 
   return (
-    <div>
-      <div>
+    <div className="category">
+      <div className="header">
         <div
           className="arrow"
           onClick={() => {
             history.push("/");
           }}
         ></div>
-        <div>
-          ONLY VEG
+        <div style={{ display: "flex", alignItems: "center" }}>
+          <span>ONLY VEG</span>
           <Switch
             checked={state.checked}
             onChange={handleChange("checked")}
             value="checked"
             color="default"
           />
+        </div>
+        <div>
           <div className="search">
             <InputBase placeholder="Search…" />
             <div className="searchIcon">
@@ -41,7 +43,7 @@ const CategoryPage = props => {
           </div>
         </div>
       </div>
-      <div>
+      <div className="categories">
         {props.activeCategory
           ? props.allCategories.map(category => {
               return (
@@ -49,8 +51,8 @@ const CategoryPage = props => {
                   <div
                     className={
                       category.name === props.activeCategory.name
-                        ? "active"
-                        : ""
+                        ? "subcategory active "
+                        : "subcategory"
                     }
                   >
                     {category.name}
@@ -60,7 +62,7 @@ const CategoryPage = props => {
             })
           : null}
       </div>
-      <div>
+      <div className="subCategories-list">
         {props.activeCategory
           ? props.activeCategory.subCategories.map(subCategory => {
               return (

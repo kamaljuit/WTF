@@ -7,13 +7,25 @@ import { Button } from "@material-ui/core";
 export default function FoodItem(props) {
   return (
     <Card className="item">
-      <CardMedia className="media" image="/logo192.png" title="Paella dish" />
+      {/* <CardMedia
+        className="media"
+        image={`http://localhost:4000${props.img}`}
+        title={props.name}
+      /> */}
+      <CardContent>
+        <img src={`${props.img}`} className="tile-image" />
+      </CardContent>
       <CardContent>
         <h4>{props.name}</h4>
-        <span>{props.ratingsAverage}</span>
-        <span>{props.numberOfRatings}</span>
-        <span>{props.price}</span>
-        <Button>+Add</Button>
+        <div className="ratings">
+          <span>{props.ratingsAverage}</span>
+          <span>{props.numberOfRatings} ratings</span>
+        </div>
+        <br />
+        <div className="footer">
+          <span>Rs.{props.price}</span>
+          <Button>+Add</Button>
+        </div>
       </CardContent>
     </Card>
   );

@@ -1,3 +1,42 @@
+.category {
+  .header {
+    display: flex;
+    margin: 4vw;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .categories {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 4vw;
+    justify-content: space-around;
+    overflow-y: auto;
+    padding: 5px 0;
+
+    .subcategory {
+      border-radius: 10px;
+      padding: 4px;
+      background-color: lightgray;
+      color: black;
+      margin: 0 5vw;
+    }
+
+    .active {
+      background-color: black;
+      color: white;
+    }
+  }
+
+  .subCategories-list {
+    margin: 0 4vw;
+
+    .card {
+      background-color: lightgrey;
+    }
+  }
+}
+
 .arrow {
   display: inline-block;
   width: 15px;
@@ -5,9 +44,11 @@
   border-top: 2px solid #000;
   border-right: 2px solid #000;
   transform: rotate(-135deg);
+  margin: 0 3vw;
 }
 
 .search {
+  display: flex;
   position: "relative";
   margin-left: 0;
   width: "100%";
